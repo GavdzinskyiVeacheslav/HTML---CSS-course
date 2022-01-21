@@ -1,0 +1,350 @@
+/*Обнуление*/
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	background-color: #333;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	color: #fff;
+	font-size: 16px;
+}
+a {
+	color: chartreuse;
+	text-decoration: none;
+}
+h1 {
+	font-size: 40px;
+	margin: 0px 0px 30px 0px;
+}
+h2 {
+	font-size: 30px;
+	margin: 0px 0px 20px 0px;
+}
+h3 {
+	font-size: 24px;
+	margin: 0px 0px 20px 0px;
+}
+h4 {
+	font-size: 20px;
+	margin: 0px 0px 15px 0px;
+}
+h5 {
+	font-size: 16px;
+	margin: 0px 0px 10px 0px;
+}
+p {
+	line-height: 20px;
+	margin: 20px 0;
+}
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	padding: 30px 3%;
+}
+.content__block {
+	margin: 0px 0px 50px 0px;
+}
+/* Основные стили */
+.section {
+	margin: 0px 0px 50px 0px;
+}
+.section__block {
+	margin: 0px 0px 30px 0px;
+}
+
+.section__item {
+	text-align: justify;
+}
+.section__item_padding {
+	padding: 15px;
+}
+.section__item_color-1 {
+	background-color: #794f45;
+}
+.section__item_color-2 {
+	background-color: #77608d;
+}
+.section__item_color-3 {
+	background-color: #7a956b;
+}
+
+/* Общая информация, синтаксис */
+div.section__item_info {
+	padding: 15px;
+	margin: 0px 0px 20px 0px;
+}
+span.section__item_info {
+	display: inline-block;
+	padding: 20px;
+	margin: 0px 20px;
+}
+img.section__image {
+	padding: 15px;
+	width: 300px;
+}
+
+/* Отступы и размеры блока. Свойство box-sizing */
+.section__item_size {
+	width: 500px;
+	padding: 15px;
+	box-sizing: border-box;
+	/* Попробовать на картинке */
+}
+
+/* Отступы и фон */
+.section__item_background-color {
+	margin: 15px;
+	padding: 15px;
+}
+.section__item_background-image {
+	color: rgb(177, 177, 177);
+	padding: 0px 0px 0px 50px;
+	background: url("../img/icon.svg") 0 0px / 33px no-repeat;
+}
+
+/* Отступы и позиционирование */
+.section__item_position {
+	position: relative;
+	color: rgb(177, 177, 177);
+	padding: 0px 0px 0px 50px;
+}
+.section__item_position::before {
+	width: 25px;
+	height: 25px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+}
+
+/* Отступы и overflow: hidden; */
+
+.section__block_hidden {
+	overflow: hidden;
+	padding: 25px;
+}
+.section__item_hidden {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	box-shadow: 0 0 20px #d9f5c8;
+}
+
+/* Центровка блока */
+.section__item_center {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0px auto;
+}
+
+/* Отрицательные значения Margin */
+.section__item_minus {
+	padding: 15px;
+}
+.section__item_minus-top {
+	position: relative;
+	z-index: 2;
+	margin: -50px 0px 0px 0px;
+}
+
+.section__row {
+	display: flex;
+	margin: 0px -15px;
+}
+.section__column {
+	padding: 0px 15px;
+	flex: 0 1 33.333%;
+}
+.section__item_flex {
+	padding: 15px;
+}
+
+.slider {
+	display: flex;
+	overflow: hidden;
+	margin: -25px 0;
+	padding: 25px 0;
+}
+.slider__item {
+	text-align: center;
+	flex: 0 1 33.333%;
+}
+.slider__image {
+	width: 150px;
+	height: 150px;
+	margin: 0px auto;
+	border-radius: 50%;
+	background-color: #7a956b;
+	box-shadow: 0 0 20px #d9f5c8;
+}
+
+/* Схлопывание Margin */
+.section__item_collapse {
+	padding: 15px;
+	margin: 0px 0px 20px 0px;
+}
+.section__item_collapse-top {
+	margin: -10px 0px 20px 0px;
+}
+
+/*
+Отступы следует задавать
+от предыдущего элемента к следующему
+*/
+
+.section__item_bottom {
+	padding: 10px;
+	margin: 0px 0px 20px 0px;
+}
+
+.section__items {
+	display: flex;
+}
+
+.section__item_right {
+	padding: 15px;
+	margin: 0px 20px 0px 0px;
+}
+
+/*
+У последнего элемента группы,
+отступ следует обнулять
+*/
+
+.section__body_last {
+	background-color: #77608d;
+	padding: 20px 50px;
+}
+
+.section__list {
+}
+.section__list li {
+	margin: 0px 0px 10px 0px;
+}
+.section__list li:last-child {
+	margin: 0px 0px 0px 0px;
+}
+
+.section__item_item {
+	padding: 15px;
+}
+
+.section__block *:last-child{
+	margin-bottom: 0;
+}
+
+/*
+Отступы задаются самому
+верхнему родителю в конструкции (доме)
+
+!!! В том числе, таким образом можно
+избежать проблем при отступах
+с заливкой фона
+*/
+
+.section__body_parent {
+	background-color: #7a956b;
+	padding: 30px 50px;
+}
+.section__list {
+}
+.section__item_parent {
+	margin: 0px 0px 20px 0px;
+	/* Даже задав отступ тут будет проблема */
+}
+.section__item_parent:last-child {
+	margin: 0;
+}
+
+/*
+Внешние отступы не следует задавать
+для независимых элементов (БЭМ блок)
+*/
+
+.portfolio {
+	background-color: #794f45;
+	padding: 30px 15px;
+}
+.portfolio__header {
+	margin: 0px 0px 20px 0px;
+}
+
+.contacts {
+	background-color: #77608d;
+	padding: 30px 15px;
+}
+.contacts__header {
+	margin: 0px 0px 40px 0px;
+}
+
+.header {
+	text-align: center;
+}
+.header__title {
+	font-size: 30px;
+	margin: 0px 0px 5px 0px;
+}
+.header__text {
+	font-size: 20px;
+}
+/*
+Отступы должны улучшать
+удобство пользования и восприятие
+*/
+
+.compare {
+}
+.compare__row {
+	display: flex;
+	margin: 0px -15px 30px;
+}
+.compare__column {
+	padding: 0px 15px;
+	flex: 0 1 50%;
+}
+
+.compare__item {
+	padding: 20px 15px;
+}
+.compare__item_bad {
+	padding: 80px 15px;
+}
+
+.compare__item_color-1 {
+	background-color: #794f45;
+}
+.compare__item_color-2 {
+	background-color: #7a956b;
+}
+.compare__title {
+	font-size: 30px;
+	margin: 0px 0px 10px 0px;
+}
+.compare__title_bad {
+	margin: 0px 0px 40px 0px;
+}
+
+.compare__text {
+}
+
+.compare__link {
+	display: inline-block;
+	padding: 10px;
+	line-height: 10px;
+}
+.compare__link_bad {
+	padding: 0;
+}
